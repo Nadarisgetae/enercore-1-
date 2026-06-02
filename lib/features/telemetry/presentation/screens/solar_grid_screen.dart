@@ -99,7 +99,10 @@ class _SolarGridScreenState extends State<SolarGridScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         children: [
-          const Icon(Icons.menu_rounded, color: _slateDark, size: 22),
+          GestureDetector(
+            onTap: () => context.pop(),
+            child: const Icon(Icons.arrow_back_rounded, color: _slateDark, size: 22),
+          ),
           const SizedBox(width: 12),
           Image.asset(
             'assets/images/logo.png',

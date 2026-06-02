@@ -140,8 +140,6 @@ class _ClientDashboardScreenState extends State<ClientDashboardScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         children: [
-          const Icon(Icons.menu_rounded, color: _slateDark, size: 22),
-          const SizedBox(width: 12),
           Image.asset(
             'assets/images/logo.png',
             height: 24,
