@@ -897,11 +897,11 @@ class _ClientDashboardScreenState extends State<ClientDashboardScreen> {
     final items = [
       (Icons.home_rounded, 'Home'),
       (Icons.solar_power_rounded, 'Plants'),
-      (Icons.receipt_long_rounded, 'Billing'),
+      (Icons.sensors_rounded, 'Telemetry'),
       (Icons.confirmation_number_outlined, 'Tickets'),
       (Icons.person_outline_rounded, 'Profile'),
     ];
-    final routes = [null, '/solar-grid', '/billing', '/tickets', '/profile'];
+    final routes = [null, '/solar-grid', '/telemetry', '/tickets', '/profile'];
     return Container(
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -916,8 +916,11 @@ class _ClientDashboardScreenState extends State<ClientDashboardScreen> {
           final active = _selectedNav == i;
           return GestureDetector(
             onTap: () {
-              setState(() => _selectedNav = i);
-              if (routes[i] != null) context.push(routes[i]!);
+              if (routes[i] != null) {
+                context.push(routes[i]!);
+              } else {
+                setState(() => _selectedNav = i);
+              }
             },
             child: Container(
               color: Colors.transparent,

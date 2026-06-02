@@ -716,11 +716,11 @@ class _SolarGridScreenState extends State<SolarGridScreen> {
     final items = [
       (Icons.home_rounded, 'Home'),
       (Icons.solar_power_rounded, 'Plants'),
-      (Icons.receipt_long_rounded, 'Billing'),
+      (Icons.sensors_rounded, 'Telemetry'),
       (Icons.confirmation_number_outlined, 'Tickets'),
       (Icons.person_outline_rounded, 'Profile'),
     ];
-    final routes = ['/client-dashboard', null, '/billing', '/tickets', '/profile'];
+    final routes = ['/client-dashboard', null, '/telemetry', '/tickets', '/profile'];
     return Container(
       decoration: const BoxDecoration(
         color: Colors.white,
