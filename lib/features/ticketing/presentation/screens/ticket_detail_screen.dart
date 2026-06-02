@@ -104,31 +104,31 @@ class _TicketsDetailScreenState extends State<TicketsDetailScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         children: [
-          GestureDetector(
-            onTap: () => context.pop(),
-            child: const Icon(Icons.arrow_back_rounded, color: _slateDark, size: 22),
-          ),
-          const Spacer(),
-          Image.asset('assets/images/logo.png', height: 26),
-          const Spacer(),
-          Container(
-            width: 36,
-            height: 36,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-              border: Border.all(color: _cardBorder, width: 1),
-            ),
-            child: const Icon(Icons.notifications_outlined, color: _slateLight, size: 20),
+          const Icon(Icons.menu_rounded, color: _slateDark, size: 22),
+          const SizedBox(width: 12),
+          Image.asset(
+            'assets/images/logo.png',
+            height: 24,
+            fit: BoxFit.contain,
           ),
           const SizedBox(width: 8),
+          const Text(
+            'Enercore',
+            style: TextStyle(
+              color: _teal,
+              fontSize: 16,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 0.3,
+            ),
+          ),
+          const Spacer(),
           Container(
             width: 32,
             height: 32,
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
-                image: NetworkImage('https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&fit=crop&q=80'),
+                image: NetworkImage('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&fit=crop&q=80'),
                 fit: BoxFit.cover,
               ),
             ),

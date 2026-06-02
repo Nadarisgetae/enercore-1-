@@ -78,7 +78,6 @@ class _TelemetryDashboardScreenState extends State<TelemetryDashboardScreen> {
     );
   }
 
-  // ── Top Bar ────────────────────────────────────────────────────────────────
   Widget _topBar() {
     return Container(
       height: 56,
@@ -91,37 +90,34 @@ class _TelemetryDashboardScreenState extends State<TelemetryDashboardScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         children: [
-          const Icon(Icons.sensors_rounded, color: _teal, size: 24),
+          const Icon(Icons.menu_rounded, color: _slateDark, size: 22),
+          const SizedBox(width: 12),
+          Image.asset(
+            'assets/images/logo.png',
+            height: 24,
+            fit: BoxFit.contain,
+          ),
           const SizedBox(width: 8),
           const Text(
-            'Enercore Telemetry',
+            'Enercore',
             style: TextStyle(
               color: _teal,
               fontSize: 16,
-              fontWeight: FontWeight.w800,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 0.3,
             ),
           ),
           const Spacer(),
           Container(
-            width: 36,
-            height: 36,
-            decoration: BoxDecoration(
-              color: Colors.white,
+            width: 32,
+            height: 32,
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(color: _cardBorder, width: 1),
+              image: DecorationImage(
+                image: NetworkImage('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&fit=crop&q=80'),
+                fit: BoxFit.cover,
+              ),
             ),
-            child: const Icon(Icons.notifications_outlined, color: _slateLight, size: 20),
-          ),
-          const SizedBox(width: 8),
-          Container(
-            width: 36,
-            height: 36,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: _cardBorder, width: 1),
-            ),
-            child: const Icon(Icons.menu_rounded, color: _slateLight, size: 20),
           ),
         ],
       ),
