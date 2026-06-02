@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+/// [ProfileSettingsScreen] represents the unified "Verdant Precision"
+/// admin and personal profile configurations page. It provides the user with
+/// interfaces to update personal info, manage 2FA security, active sessions,
+/// theme selections, and perform secure logouts.
 class ProfileSettingsScreen extends StatefulWidget {
   const ProfileSettingsScreen({super.key});
 
@@ -9,10 +13,17 @@ class ProfileSettingsScreen extends StatefulWidget {
 }
 
 class _ProfileSettingsScreenState extends State<ProfileSettingsScreen> {
-  int _selectedNav = 5; // Profile tab active
-  int _selectedTab = 0; // Profile tab selected
+  /// Track which bottom navigation bar item is active (index 5 represents Profile)
+  int _selectedNav = 5;
+
+  /// Track active sub-sections tab (0: Profile, 1: Security, 2: Billing)
+  int _selectedTab = 0;
+
+  /// Manage two-factor authentication switch value
   bool _twoFactorEnabled = true;
-  int _selectedTheme = 0; // Light selected
+
+  /// Maintain active theme selection index (0: Light, 1: Dark, 2: System)
+  int _selectedTheme = 0;
 
   // Premium Design System
   static const _bg = Color(0xFFF4F6F8);
